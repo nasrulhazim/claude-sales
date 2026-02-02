@@ -1,0 +1,201 @@
+# Sales Reference
+
+This document provides the logic and patterns for sales, pricing, and marketing commands.
+
+## Pricing Logic
+
+### Partner Channel Calculations
+
+```
+Base Price = product.base_price
+
+Referrer (10%):
+  partner_fee = base_price × 0.10
+  you_receive = base_price × 0.90
+
+Affiliate (20%):
+  partner_commission = base_price × 0.20
+  you_receive = base_price × 0.80
+
+Reseller (30%):
+  partner_margin = base_price × 0.30
+  you_receive = base_price × 0.70
+  (partner may sell at higher price, keeping extra)
+
+Fronting (15%):
+  partner_fee = project_value × 0.15
+  you_receive = project_value × 0.85
+```
+
+### Project Pricing Formula
+
+```
+Project Total = License
+              + Add-ons
+              + Services
+              + Support (optional)
+
+Typical Ranges:
+  SME Basic:        License only
+  SME Plus:         License + 1-2 add-ons
+  Enterprise:       License + add-ons + training
+  Government:       Full scope + support + documentation
+```
+
+### Maintenance Calculation
+
+```
+Year 1:     Included in license
+Year 2+:    license_price × maintenance_rate (typically 20%)
+
+Maintenance includes:
+  - Software updates
+  - Security patches
+  - Compatibility updates
+  - Email support
+```
+
+## Response Patterns
+
+### Pricing Response Structure
+
+1. **Header** - What's being quoted
+2. **Price Box** - Clear price display
+3. **Includes** - What's covered
+4. **Add-ons** - Optional extras
+5. **Terms** - Payment, validity
+6. **Notes** - Important caveats
+
+### Partner Response Structure
+
+1. **Channel Info** - Type, margin, role
+2. **Split Calculation** - Who gets what
+3. **Responsibilities** - Partner vs you
+4. **MAP Warning** - Minimum price if applicable
+
+### Quotation Response Structure
+
+1. **Header** - Customer, date, validity
+2. **Line Items** - Numbered, with amounts
+3. **Total** - Clear sum
+4. **Optional Add-ons** - Upsell opportunities
+5. **Terms** - Payment terms
+6. **Notes** - Conditions
+
+## Formatting Standards
+
+### Currency Display
+
+```
+MYR 25,000      # With currency prefix
+RM 25,000       # Malaysian shorthand
+USD 5,000       # US dollars
+$5,000          # Dollar shorthand
+
+Ranges:
+MYR 10,000 - 25,000
+```
+
+### Tables
+
+Use box drawing for clarity:
+
+```
+┌─────────────────────────────────────────────────┐
+│ Header                                          │
+├─────────────────────────────────────────────────┤
+│ Content                              Amount     │
+├─────────────────────────────────────────────────┤
+│ TOTAL                                XX,XXX     │
+└─────────────────────────────────────────────────┘
+```
+
+### Emphasis
+
+```
+═══════════════════════════════════════════════════  (major sections)
+───────────────────────────────────────────────────  (sub-sections)
+```
+
+## FAQ Response Patterns
+
+Group FAQs by category:
+
+1. **Deployment** - How to install, requirements
+2. **Pricing** - Costs, payment terms
+3. **Features** - What's included, limitations
+4. **Support** - What's covered, response times
+5. **Partners** - Channel options, margins
+
+## Marketing Response Patterns
+
+### Taglines
+
+- Keep under 10 words
+- Focus on benefit or transformation
+- Avoid jargon
+
+### Elevator Pitch
+
+- 50-75 words
+- Structure: Problem → Solution → Differentiator → CTA
+- End with price or action
+
+### Social Media
+
+- Match platform tone
+- Include emojis sparingly for casual
+- Always end with CTA/link
+- Suggest hashtags
+
+### ROI Calculation
+
+- Use concrete numbers
+- Show monthly AND annual impact
+- Include "soft" benefits too
+
+## Reading Product Config
+
+Look for `product-config.md` in:
+
+1. Current directory
+2. Project root
+3. Parent directories
+
+If not found, prompt user to create one using template.
+
+## Error Handling
+
+### Missing Config
+
+```
+⚠️  No product-config.md found
+
+To use pricing commands, create a product config:
+  cp ~/.claude/product-config-template.md ./product-config.md
+
+Then edit with your product details.
+```
+
+### Missing Required Fields
+
+```
+⚠️  Missing required field: base_price
+
+Please add to your product-config.md:
+  base_price: 25000
+```
+
+### Invalid Scenario
+
+```
+❓ I didn't understand that pricing scenario.
+
+Try:
+  /sales-get-pricing license
+  /sales-get-pricing via reseller
+  /sales-get-pricing government full
+
+Or describe what you need:
+  /sales-get-pricing for 5 users with monitoring and training
+```

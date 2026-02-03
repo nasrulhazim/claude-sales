@@ -52,6 +52,6 @@ Key sections: basic info, pricing (base + add-ons + maintenance + MAP), partner 
 ## Conventions
 
 - All command files use Markdown with embedded YAML for structured data.
-- Pricing outputs use box-drawing characters for formatted tables.
+- Pricing outputs use standard Markdown tables for all tabular data.
 - All workflow and architecture diagrams use MermaidJS (` ```mermaid `) for consistency and rendering support across GitHub, VS Code, and documentation tools.
 - The GitHub remote repo name is `claude-sales` (at `nasrulhazim/claude-sales`), though this local directory uses `claude-get-pricing`.

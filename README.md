@@ -163,58 +163,58 @@ This project has sales configuration. Reference `product-config.md` for:
 
 ### /sales-get-pricing via reseller
 
-```
-PARTNER PRICING: Reseller
-═══════════════════════════════════════════════════
+```markdown
+## PARTNER PRICING: Reseller
 
-Channel:        Reseller
-Margin:         30%
-Role:           Full sales cycle, they close deal
+| | |
+|---|---|
+| **Channel** | Reseller |
+| **Margin** | 30% |
+| **Role** | Full sales cycle, they close deal |
 
-┌─────────────────────────────────────────────────┐
-│ Customer Pays          RM 25,000+               │
-│ Partner Keeps          RM 7,500+ (30%)          │
-│ You Receive            RM 17,500                │
-└─────────────────────────────────────────────────┘
+| | Amount |
+|---|---|
+| Customer Pays | RM 25,000+ |
+| Partner Keeps | RM 7,500+ (30%) |
+| You Receive | RM 17,500 |
 
-Partner Responsibilities:
-  • Full sales cycle
-  • May handle deployment
-  • May provide L1 support
+**Partner Responsibilities:**
+- Full sales cycle
+- May handle deployment
+- May provide L1 support
 
-Your Responsibilities:
-  • Provide license
-  • Technical backup/escalation
-  • Product updates
+**Your Responsibilities:**
+- Provide license
+- Technical backup/escalation
+- Product updates
 
-MAP (Minimum): Partner cannot sell below RM 22,000
+**MAP (Minimum):** Partner cannot sell below RM 22,000
 ```
 
 ### /sales-get-quotation government
 
-```
-QUOTATION: Government Standard
-═══════════════════════════════════════════════════
+```markdown
+## QUOTATION: Government Standard
 
-┌─────────────────────────────────────────────────┐
-│ Item                              Amount (MYR)  │
-├─────────────────────────────────────────────────┤
-│ Product License                        25,000   │
-│ Monitoring Integration                 25,000   │
-│ Training (2 days)                      10,000   │
-├─────────────────────────────────────────────────┤
-│ TOTAL                                  60,000   │
-└─────────────────────────────────────────────────┘
+| Item | Amount (MYR) |
+|------|-------------|
+| Product License | 25,000 |
+| Monitoring Integration | 25,000 |
+| Training (2 days) | 10,000 |
+| **TOTAL** | **60,000** |
 
-Optional Add-ons:
-  • Annual Support (12 months)     RM 60,000
-  • Customization (SSO)            RM 15,000
-  • Additional Training            RM 5,000/day
+**Optional Add-ons:**
 
-Notes:
-  • Deployment included
-  • 1 year updates & support included
-  • Maintenance Year 2+: RM 5,000/year
+| Add-on | Price |
+|--------|-------|
+| Annual Support (12 months) | RM 60,000 |
+| Customization (SSO) | RM 15,000 |
+| Additional Training | RM 5,000/day |
+
+**Notes:**
+- Deployment included
+- 1 year updates & support included
+- Maintenance Year 2+: RM 5,000/year
 ```
 
 ## Product Config Template

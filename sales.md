@@ -123,7 +123,7 @@ Then display a brief confirmation listing all files written:
 
 ```text
 SALES KIT COMPLETE
-═══════════════════════════════════════════════════
+---
 
 Files saved to docs/sales-kit/:
   • pricing.md        — base, packages, partner channels
@@ -167,7 +167,7 @@ Only the summary confirmation is displayed in the terminal:
 
 ```text
 SALES KIT COMPLETE
-═══════════════════════════════════════════════════
+---
 
 Files saved to docs/sales-kit/:
   • pricing.md        — base, packages, partner channels

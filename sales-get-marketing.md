@@ -46,90 +46,90 @@ Generate marketing content for products/services.
 ## Output Formats
 
 ### Taglines
-```
-TAGLINES
-═══════════════════════════════════════════════════
 
-Primary:
-  "[Main tagline]"
+```markdown
+## TAGLINES
 
-Alternatives:
-  • "[Alternative 1]"
-  • "[Alternative 2]"
-  • "[Alternative 3]"
+**Primary:**
+> "[Main tagline]"
 
-Usage:
-  • Website hero: Primary tagline
-  • Social media bio: Alternative 1
-  • Email signature: Alternative 2
+**Alternatives:**
+- "[Alternative 1]"
+- "[Alternative 2]"
+- "[Alternative 3]"
+
+**Usage:**
+
+| Placement | Tagline |
+|-----------|---------|
+| Website hero | Primary tagline |
+| Social media bio | Alternative 1 |
+| Email signature | Alternative 2 |
 ```
 
 ### Elevator Pitch
-```
-ELEVATOR PITCH (30 seconds)
-═══════════════════════════════════════════════════
 
-"[Your pitch here - approximately 50-75 words that
-explain what the product does, who it's for, and
-why they should care. End with price point or CTA.]"
+```markdown
+## ELEVATOR PITCH (30 seconds)
 
-Key Points:
-  1. [Problem statement]
-  2. [Solution]
-  3. [Key differentiator]
-  4. [Price/CTA]
+> "[Your pitch here - approximately 50-75 words that
+> explain what the product does, who it's for, and
+> why they should care. End with price point or CTA.]"
+
+**Key Points:**
+1. [Problem statement]
+2. [Solution]
+3. [Key differentiator]
+4. [Price/CTA]
 ```
 
 ### Social Media
-```
-SOCIAL MEDIA POST: [Style]
-═══════════════════════════════════════════════════
+
+```markdown
+## SOCIAL MEDIA POST: [Style]
 
 [Post content here]
 
 ---
 
-Hashtags:
-  #hashtag1 #hashtag2 #hashtag3
+**Hashtags:** #hashtag1 #hashtag2 #hashtag3
 
-Best for:
-  • [Platform 1]
-  • [Platform 2]
+**Best for:**
+- [Platform 1]
+- [Platform 2]
 
-Post time:
-  • Best: [time recommendation]
+**Post time:** [time recommendation]
 ```
 
 ### Value Proposition / ROI
-```
-VALUE PROPOSITION
-═══════════════════════════════════════════════════
 
-Problem:
-  [What pain point does this solve?]
+```markdown
+## VALUE PROPOSITION
 
-Solution:
-  [How does the product solve it?]
+**Problem:**
+[What pain point does this solve?]
 
-ROI Calculation:
-┌─────────────────────────────────────────────────┐
-│ Current State (Without Product)                 │
-│ ───────────────────────────────────────────────│
-│ Hours spent on [task]/month:     [X] hours     │
-│ Hourly rate:                     [currency] [X]│
-│ Monthly cost:                    [currency] [X]│
-│ Annual cost:                     [currency] [X]│
-├─────────────────────────────────────────────────┤
-│ With Product                                    │
-│ ───────────────────────────────────────────────│
-│ Investment:                      [currency] [X]│
-│ Payback period:                  [X months]    │
-└─────────────────────────────────────────────────┘
+**Solution:**
+[How does the product solve it?]
 
-Additional Benefits:
-  • [Benefit 1]
-  • [Benefit 2]
-  • [Benefit 3]
+**ROI Calculation:**
+
+| Current State (Without Product) | |
+|---|---|
+| Hours spent on [task]/month | [X] hours |
+| Hourly rate | [currency] [X] |
+| Monthly cost | [currency] [X] |
+| Annual cost | [currency] [X] |
+
+| With Product | |
+|---|---|
+| Investment | [currency] [X] |
+| Payback period | [X months] |
+
+**Additional Benefits:**
+- [Benefit 1]
+- [Benefit 2]
+- [Benefit 3]
 ```
 
 ## Configuration Reference
@@ -171,30 +171,33 @@ value_proposition:
 **User**: `/sales-get-marketing taglines`
 
 **Response**:
-```
-TAGLINES
-═══════════════════════════════════════════════════
 
-Primary:
-  "Build Forms That Work For You"
+```markdown
+## TAGLINES
 
-Alternatives:
-  • "No-Code Forms, Pro-Level Workflows"
-  • "From Submission to Action, Automated"
-  • "Smart Forms for Growing Teams"
+**Primary:**
+> "Build Forms That Work For You"
 
-Usage:
-  • Website hero: Primary tagline
-  • Social media bio: "No-Code Forms, Pro-Level Workflows"
-  • Email signature: "From Submission to Action, Automated"
+**Alternatives:**
+- "No-Code Forms, Pro-Level Workflows"
+- "From Submission to Action, Automated"
+- "Smart Forms for Growing Teams"
+
+**Usage:**
+
+| Placement | Tagline |
+|-----------|---------|
+| Website hero | Primary tagline |
+| Social media bio | "No-Code Forms, Pro-Level Workflows" |
+| Email signature | "From Submission to Action, Automated" |
 ```
 
 **User**: `/sales-get-marketing social casual`
 
 **Response**:
-```
-SOCIAL MEDIA POST: Casual
-═══════════════════════════════════════════════════
+
+```markdown
+## SOCIAL MEDIA POST: Casual
 
 You know what's wild?
 
@@ -211,24 +214,22 @@ Try it → formcraft.io
 
 ---
 
-Hashtags:
-  #NoCode #Automation #FormBuilder #Productivity
+**Hashtags:** #NoCode #Automation #FormBuilder #Productivity
 
-Best for:
-  • LinkedIn
-  • Twitter/X
-  • Facebook
+**Best for:**
+- LinkedIn
+- Twitter/X
+- Facebook
 
-Post time:
-  • Best: Tuesday-Thursday, 9am-11am
+**Post time:** Tuesday-Thursday, 9am-11am
 ```
 
 **User**: `/sales-get-marketing social professional`
 
 **Response**:
-```
-SOCIAL MEDIA POST: Professional
-═══════════════════════════════════════════════════
+
+```markdown
+## SOCIAL MEDIA POST: Professional
 
 Manual data collection costs organizations an average of
 30+ hours per month in administrative overhead.
@@ -244,78 +245,75 @@ Learn more at formcraft.io
 
 ---
 
-Hashtags:
-  #DigitalTransformation #WorkflowAutomation #Enterprise
+**Hashtags:** #DigitalTransformation #WorkflowAutomation #Enterprise
 
-Best for:
-  • LinkedIn
-  • Email newsletter
+**Best for:**
+- LinkedIn
+- Email newsletter
 
-Post time:
-  • Best: Monday-Wednesday, 8am-10am
+**Post time:** Monday-Wednesday, 8am-10am
 ```
 
 **User**: `/sales-get-marketing elevator pitch`
 
 **Response**:
-```
-ELEVATOR PITCH (30 seconds)
-═══════════════════════════════════════════════════
 
-"Every company has forms — intake forms, approval forms,
-feedback forms. Most still do them on paper or email.
+```markdown
+## ELEVATOR PITCH (30 seconds)
 
-FormCraft is a no-code platform where anyone can build
-smart digital forms with built-in workflow automation.
+> "Every company has forms — intake forms, approval forms,
+> feedback forms. Most still do them on paper or email.
+>
+> FormCraft is a no-code platform where anyone can build
+> smart digital forms with built-in workflow automation.
+>
+> Submissions route to the right people, approvals happen
+> in-app, and data flows straight into your systems.
+>
+> One-time license at RM 18,000, deploy on your servers,
+> no recurring fees."
 
-Submissions route to the right people, approvals happen
-in-app, and data flows straight into your systems.
-
-One-time license at RM 18,000, deploy on your servers,
-no recurring fees."
-
-Key Points:
-  1. Universal problem — every company has forms
-  2. No-code solution — anyone can build
-  3. Workflow automation built in
-  4. On-premise, one-time pricing
+**Key Points:**
+1. Universal problem — every company has forms
+2. No-code solution — anyone can build
+3. Workflow automation built in
+4. On-premise, one-time pricing
 ```
 
 **User**: `/sales-get-marketing roi`
 
 **Response**:
-```
-VALUE PROPOSITION & ROI
-═══════════════════════════════════════════════════
 
-Problem:
-  Teams waste hours on manual data collection — paper forms,
-  email chains, copy-pasting into spreadsheets. Errors slip
-  through, approvals stall, and nothing is trackable.
+```markdown
+## VALUE PROPOSITION & ROI
 
-Solution:
-  FormCraft replaces manual workflows with smart digital forms
-  that route data automatically, trigger approvals, and sync
-  with your existing tools.
+**Problem:**
+Teams waste hours on manual data collection — paper forms,
+email chains, copy-pasting into spreadsheets. Errors slip
+through, approvals stall, and nothing is trackable.
 
-ROI Calculation:
-┌─────────────────────────────────────────────────┐
-│ Current State (Manual Forms)                    │
-│ ───────────────────────────────────────────────│
-│ Hours on data entry/month:     30 hours         │
-│ Staff hourly rate:             MYR 40           │
-│ Monthly cost:                  MYR 1,200        │
-│ Annual cost:                   MYR 14,400       │
-├─────────────────────────────────────────────────┤
-│ With FormCraft                                  │
-│ ───────────────────────────────────────────────│
-│ Investment:                    MYR 18,000       │
-│ Payback period:                ~15 months       │
-└─────────────────────────────────────────────────┘
+**Solution:**
+FormCraft replaces manual workflows with smart digital forms
+that route data automatically, trigger approvals, and sync
+with your existing tools.
 
-Additional Benefits:
-  • Zero data entry errors
-  • Full audit trail on every submission
-  • Approval cycle time reduced by 60%
-  • Works offline — syncs when reconnected
+**ROI Calculation:**
+
+| Current State (Manual Forms) | |
+|---|---|
+| Hours on data entry/month | 30 hours |
+| Staff hourly rate | MYR 40 |
+| Monthly cost | MYR 1,200 |
+| Annual cost | MYR 14,400 |
+
+| With FormCraft | |
+|---|---|
+| Investment | MYR 18,000 |
+| Payback period | ~15 months |
+
+**Additional Benefits:**
+- Zero data entry errors
+- Full audit trail on every submission
+- Approval cycle time reduced by 60%
+- Works offline — syncs when reconnected
 ```

@@ -69,64 +69,64 @@ Get comprehensive pricing information based on the scenario specified.
 
 ### Direct Pricing
 
-```
-PRICING: [Product Name]
-═══════════════════════════════════════════════════
+```markdown
+## PRICING: [Product Name]
 
-Base License:           [currency] [amount]
+**Base License:** [currency] [amount]
 
-Includes:
-  • [Feature 1]
-  • [Feature 2]
-  • [Feature 3]
+**Includes:**
+- [Feature 1]
+- [Feature 2]
+- [Feature 3]
 
-Add-ons Available:
-  • [Add-on 1]          [currency] [amount]
-  • [Add-on 2]          [currency] [amount]
+**Add-ons Available:**
 
-Maintenance (Year 2+):  [currency] [amount]/year
+| Add-on | Price |
+|--------|-------|
+| [Add-on 1] | [currency] [amount] |
+| [Add-on 2] | [currency] [amount] |
+
+**Maintenance (Year 2+):** [currency] [amount]/year
 ```
 
 ### Partner Pricing
 
-```
-PARTNER PRICING: [Channel Type]
-═══════════════════════════════════════════════════
+```markdown
+## PARTNER PRICING: [Channel Type]
 
-Channel:        [Type]
-Margin:         [X]%
-Role:           [Description]
+| | |
+|---|---|
+| **Channel** | [Type] |
+| **Margin** | [X]% |
+| **Role** | [Description] |
 
-┌─────────────────────────────────────────────────┐
-│ Customer Pays          [currency] [amount]      │
-│ Partner Keeps          [currency] [amount] (X%) │
-│ You Receive            [currency] [amount]      │
-└─────────────────────────────────────────────────┘
+| | Amount |
+|---|---|
+| Customer Pays | [currency] [amount] |
+| Partner Keeps | [currency] [amount] (X%) |
+| You Receive | [currency] [amount] |
 
-Partner Responsibilities:
-  • [Responsibility 1]
-  • [Responsibility 2]
+**Partner Responsibilities:**
+- [Responsibility 1]
+- [Responsibility 2]
 
-Your Responsibilities:
-  • [Responsibility 1]
-  • [Responsibility 2]
+**Your Responsibilities:**
+- [Responsibility 1]
+- [Responsibility 2]
 ```
 
 ### Partner Comparison
 
-```
-PARTNER CHANNEL COMPARISON
-═══════════════════════════════════════════════════
+```markdown
+## PARTNER CHANNEL COMPARISON
 
-┌───────────┬────────┬─────────────┬─────────────┐
-│ Channel   │ Margin │ Partner Get │ You Receive │
-├───────────┼────────┼─────────────┼─────────────┤
-│ Direct    │ -      │ -           │ [amount]    │
-│ Referrer  │ 10%    │ [amount]    │ [amount]    │
-│ Affiliate │ 20%    │ [amount]    │ [amount]    │
-│ Reseller  │ 30%    │ [amount]    │ [amount]    │
-│ Fronting  │ 15%    │ [amount]    │ [amount]    │
-└───────────┴────────┴─────────────┴─────────────┘
+| Channel | Margin | Partner Get | You Receive |
+|---------|--------|-------------|-------------|
+| Direct | - | - | [amount] |
+| Referrer | 10% | [amount] | [amount] |
+| Affiliate | 20% | [amount] | [amount] |
+| Reseller | 30% | [amount] | [amount] |
+| Fronting | 15% | [amount] | [amount] |
 ```
 
 ## Configuration Reference
@@ -167,99 +167,95 @@ maintenance:
 
 **Response**:
 
-```
-PRICING: CloudDesk
-═══════════════════════════════════════════════════
+```markdown
+## PRICING: CloudDesk
 
-Plan:                   Professional
-Price:                  USD 299/month (per workspace)
+**Plan:** Professional
+**Price:** USD 299/month (per workspace)
 
-Includes:
-  • Unlimited agents
-  • Unlimited tickets
-  • Email + live chat channels
-  • Knowledge base
-  • SLA management
-  • API access
+**Includes:**
+- Unlimited agents
+- Unlimited tickets
+- Email + live chat channels
+- Knowledge base
+- SLA management
+- API access
 
-Add-ons Available:
-  • AI Auto-Triage       USD 99/month
-  • Phone Channel        USD 149/month
-  • Advanced Analytics   USD 79/month
+**Add-ons Available:**
 
-Annual Billing:          USD 249/month (save 17%)
+| Add-on | Price |
+|--------|-------|
+| AI Auto-Triage | USD 99/month |
+| Phone Channel | USD 149/month |
+| Advanced Analytics | USD 79/month |
+
+**Annual Billing:** USD 249/month (save 17%)
 ```
 
 **User**: `/sales-get-pricing via reseller`
 
 **Response**:
 
-```
-PARTNER PRICING: Reseller
-═══════════════════════════════════════════════════
+```markdown
+## PARTNER PRICING: Reseller
 
-Channel:        Reseller
-Margin:         30%
-Role:           Full sales cycle, they close deal
+| | |
+|---|---|
+| **Channel** | Reseller |
+| **Margin** | 30% |
+| **Role** | Full sales cycle, they close deal |
 
-┌─────────────────────────────────────────────────┐
-│ Customer Pays          USD 299/month             │
-│ Partner Keeps          USD 89.70/month (30%)     │
-│ You Receive            USD 209.30/month          │
-└─────────────────────────────────────────────────┘
+| | Amount |
+|---|---|
+| Customer Pays | USD 299/month |
+| Partner Keeps | USD 89.70/month (30%) |
+| You Receive | USD 209.30/month |
 
-Partner Responsibilities:
-  • Full sales cycle
-  • L1 support (if trained)
-  • Account management
+**Partner Responsibilities:**
+- Full sales cycle
+- L1 support (if trained)
+- Account management
 
-Your Responsibilities:
-  • Provide platform access
-  • Technical support/escalation
-  • Product updates
+**Your Responsibilities:**
+- Provide platform access
+- Technical support/escalation
+- Product updates
 
-MAP: Cannot sell below USD 249/month
+**MAP:** Cannot sell below USD 249/month
 ```
 
 **User**: `/sales-get-pricing with AI and phone`
 
 **Response**:
 
-```
-PRICING: CloudDesk + Add-ons
-═══════════════════════════════════════════════════
+```markdown
+## PRICING: CloudDesk + Add-ons
 
-┌─────────────────────────────────────────────────┐
-│ Item                              Monthly (USD)  │
-├─────────────────────────────────────────────────┤
-│ Professional Plan                       299      │
-│ AI Auto-Triage                           99      │
-│ Phone Channel                           149      │
-├─────────────────────────────────────────────────┤
-│ TOTAL                                   547      │
-└─────────────────────────────────────────────────┘
+| Item | Monthly (USD) |
+|------|---------------|
+| Professional Plan | 299 |
+| AI Auto-Triage | 99 |
+| Phone Channel | 149 |
+| **TOTAL** | **547** |
 
-Annual Billing:     USD 457/month (save 17%)
-Annual Total:       USD 5,484/year
+**Annual Billing:** USD 457/month (save 17%)
+**Annual Total:** USD 5,484/year
 ```
 
 **User**: `/sales-get-pricing partner comparison`
 
 **Response**:
 
-```
-PARTNER CHANNEL COMPARISON
-═══════════════════════════════════════════════════
+```markdown
+## PARTNER CHANNEL COMPARISON
 
-Base: USD 299/month
+**Base:** USD 299/month
 
-┌───────────┬────────┬─────────────┬─────────────┐
-│ Channel   │ Margin │ Partner Get │ You Receive │
-├───────────┼────────┼─────────────┼─────────────┤
-│ Direct    │ -      │ -           │ $299/mo     │
-│ Referrer  │ 10%    │ $29.90/mo   │ $269.10/mo  │
-│ Affiliate │ 20%    │ $59.80/mo   │ $239.20/mo  │
-│ Reseller  │ 30%    │ $89.70/mo   │ $209.30/mo  │
-│ Fronting  │ 15%    │ $44.85/mo   │ $254.15/mo  │
-└───────────┴────────┴─────────────┴─────────────┘
+| Channel | Margin | Partner Get | You Receive |
+|---------|--------|-------------|-------------|
+| Direct | - | - | $299/mo |
+| Referrer | 10% | $29.90/mo | $269.10/mo |
+| Affiliate | 20% | $59.80/mo | $239.20/mo |
+| Reseller | 30% | $89.70/mo | $209.30/mo |
+| Fronting | 15% | $44.85/mo | $254.15/mo |
 ```

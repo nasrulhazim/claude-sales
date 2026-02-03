@@ -124,23 +124,29 @@ MYR 10,000 - 25,000
 
 ### Tables
 
-Use box drawing for clarity:
+Use standard Markdown tables for all tabular data:
 
-```text
-┌─────────────────────────────────────────────────┐
-│ Header                                          │
-├─────────────────────────────────────────────────┤
-│ Content                              Amount     │
-├─────────────────────────────────────────────────┤
-│ TOTAL                                XX,XXX     │
-└─────────────────────────────────────────────────┘
+```markdown
+| Item | Amount |
+|------|--------|
+| Content | XX,XXX |
+| **TOTAL** | **XX,XXX** |
 ```
 
-### Emphasis
+Use bold (`**...**`) for totals and key labels within tables.
 
-```text
-═══════════════════════════════════════════════════  (major sections)
-───────────────────────────────────────────────────  (sub-sections)
+### Section Headers
+
+Use Markdown headings (`##`) for major sections and bold text (`**...**`) for sub-section labels:
+
+```markdown
+## PRICING: [Product Name]
+
+**Base License:** [currency] [amount]
+
+**Includes:**
+- Feature 1
+- Feature 2
 ```
 
 ## FAQ Response Patterns

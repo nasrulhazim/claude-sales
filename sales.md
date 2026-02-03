@@ -9,10 +9,29 @@ All-in-one sales command that runs the full suite: config setup, pricing, market
 
 ## Usage
 
-```
+```text
 /sales
 /sales [customer-type]
 /sales [customer-type] via [channel]
+```
+
+## Workflow
+
+```mermaid
+flowchart TD
+    A["/sales command"] --> B{product-config.md exists?}
+    B -- Yes --> C[Read config]
+    B -- No --> D["Run /sales-create-config flow"]
+    D --> C
+    C --> E[Determine parameters]
+    E --> F[Generate Pricing]
+    F --> G["Write docs/sales-kit/pricing.md"]
+    G --> H[Generate Marketing]
+    H --> I["Write docs/sales-kit/marketing.md"]
+    I --> J[Generate Quotation]
+    J --> K["Write docs/sales-kit/quotation.md"]
+    K --> L["Write docs/sales-kit/README.md"]
+    L --> M[Display summary confirmation]
 ```
 
 ## Behavior
@@ -30,11 +49,13 @@ All-in-one sales command that runs the full suite: config setup, pricing, market
 ### Step 2 — Determine Parameters
 
 Parse the user's input to determine:
+
 - **Customer type**: `sme`, `enterprise`, `government`, or general (default: show all available types from config)
 - **Channel**: `referrer`, `affiliate`, `reseller`, `fronting`, or direct (default: direct + partner comparison)
 - **Marketing style**: defaults to generating all key types (taglines, elevator pitch, one social post)
 
 If no arguments are provided, use sensible defaults:
+
 - Customer type: generate for the primary/default package in the config
 - Channel: direct pricing + partner comparison table
 - Marketing: taglines + elevator pitch + one social media post (professional style)
@@ -77,10 +98,9 @@ Format output exactly as `/sales-get-quotation` does.
 
 ### Step 6 — Generate README & Summary
 
-After all sections are generated:
+After all sections are generated, create directory `docs/sales-kit/` if it doesn't exist.
 
-1. Create directory `docs/sales-kit/` if it doesn't exist.
-2. Write a `docs/sales-kit/README.md` index file:
+Write a `docs/sales-kit/README.md` index file:
 
 ```markdown
 # Sales Kit: [Product Name]
@@ -99,9 +119,9 @@ Generated: YYYY-MM-DD
 Generated using Claude Sales Kit
 ```
 
-3. Display a brief confirmation listing all files written:
+Then display a brief confirmation listing all files written:
 
-```
+```text
 SALES KIT COMPLETE
 ═══════════════════════════════════════════════════
 
@@ -125,6 +145,7 @@ Each section is written to a separate file in `docs/sales-kit/`. Terminal output
 ### File Output Format
 
 Each output file is a proper Markdown document with:
+
 - A `# Title` header at the top
 - `Generated: YYYY-MM-DD` date stamp
 - `Product: [Product Name]` reference
@@ -132,7 +153,7 @@ Each output file is a proper Markdown document with:
 
 ### Generated Files
 
-```
+```text
 docs/sales-kit/
 ├── README.md         ← Index of all generated files
 ├── pricing.md        ← Pricing output
@@ -144,7 +165,7 @@ docs/sales-kit/
 
 Only the summary confirmation is displayed in the terminal:
 
-```
+```text
 SALES KIT COMPLETE
 ═══════════════════════════════════════════════════
 

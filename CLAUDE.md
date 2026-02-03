@@ -35,11 +35,14 @@ There is no build system, test framework, or linter. Validation is manual — in
 
 ### Data Flow
 
-```
-User types slash command → Command reads ~/.claude/sales-reference.md (logic)
-→ Command discovers product-config.md in project root
-→ Parses user scenario/parameters → Applies pricing formulas
-→ Formats and displays structured output
+```mermaid
+flowchart TD
+    A[User types slash command] --> B[Read ~/.claude/sales-reference.md]
+    B --> C[Discover product-config.md in project root]
+    C --> D[Parse user scenario & parameters]
+    D --> E[Apply pricing formulas & business logic]
+    E --> F[Write formatted output to docs/sales-kit/]
+    F --> G[Display confirmation in terminal]
 ```
 
 ### Configuration Structure (product-config.md)
@@ -50,4 +53,5 @@ Key sections: basic info, pricing (base + add-ons + maintenance + MAP), partner 
 
 - All command files use Markdown with embedded YAML for structured data.
 - Pricing outputs use box-drawing characters for formatted tables.
+- All workflow and architecture diagrams use MermaidJS (` ```mermaid `) for consistency and rendering support across GitHub, VS Code, and documentation tools.
 - The GitHub remote repo name is `claude-sales` (at `nasrulhazim/claude-sales`), though this local directory uses `claude-get-pricing`.

@@ -50,6 +50,8 @@ Using the logic from `/sales-get-pricing`, generate:
 
 Format output exactly as `/sales-get-pricing` does, using box-drawing characters and structured tables.
 
+**Write to `docs/sales-kit/pricing.md`.**
+
 ### Step 4 — Generate Marketing Content
 
 Using the logic from `/sales-get-marketing`, generate:
@@ -60,6 +62,8 @@ Using the logic from `/sales-get-marketing`, generate:
 
 Format output exactly as `/sales-get-marketing` does.
 
+**Write to `docs/sales-kit/marketing.md`.**
+
 ### Step 5 — Generate Quotation
 
 Using the logic from `/sales-get-quotation`, generate:
@@ -69,18 +73,43 @@ Using the logic from `/sales-get-quotation`, generate:
 
 Format output exactly as `/sales-get-quotation` does.
 
-### Step 6 — Summary & Next Steps
+**Write to `docs/sales-kit/quotation.md`.**
 
-After all sections are generated, show a brief summary:
+### Step 6 — Generate README & Summary
+
+After all sections are generated:
+
+1. Create directory `docs/sales-kit/` if it doesn't exist.
+2. Write a `docs/sales-kit/README.md` index file:
+
+```markdown
+# Sales Kit: [Product Name]
+
+Generated: YYYY-MM-DD
+
+## Contents
+
+| File | Description |
+|------|-------------|
+| [pricing.md](pricing.md) | Pricing breakdown |
+| [marketing.md](marketing.md) | Marketing content |
+| [quotation.md](quotation.md) | Quotation template |
+
+---
+Generated using Claude Sales Kit
+```
+
+3. Display a brief confirmation listing all files written:
 
 ```
 SALES KIT COMPLETE
 ═══════════════════════════════════════════════════
 
-Generated:
-  1. Pricing       — base, packages, partner channels
-  2. Marketing     — taglines, pitch, social post
-  3. Quotation     — [customer-type] package breakdown
+Files saved to docs/sales-kit/:
+  • pricing.md        — base, packages, partner channels
+  • marketing.md      — taglines, pitch, social post
+  • quotation.md      — [customer-type] package breakdown
+  • README.md         — index of all generated files
 
 Need more detail? Run individual commands:
   /sales-get-pricing [scenario]
@@ -91,32 +120,39 @@ Need more detail? Run individual commands:
 
 ## Output Structure
 
-The full output is displayed as one continuous response with clear section dividers:
+Each section is written to a separate file in `docs/sales-kit/`. Terminal output is minimal — just a confirmation with file paths.
+
+### File Output Format
+
+Each output file is a proper Markdown document with:
+- A `# Title` header at the top
+- `Generated: YYYY-MM-DD` date stamp
+- `Product: [Product Name]` reference
+- The formatted content (box-drawing tables, sections, etc.) wrapped in code blocks for proper rendering
+
+### Generated Files
 
 ```
-══════════════════════════════════════════════════════
- SALES KIT: [Product Name]
-══════════════════════════════════════════════════════
+docs/sales-kit/
+├── README.md         ← Index of all generated files
+├── pricing.md        ← Pricing output
+├── marketing.md      ← Marketing output
+└── quotation.md      ← Quotation output
+```
 
+### Terminal Output
 
-─── PRICING ──────────────────────────────────────────
+Only the summary confirmation is displayed in the terminal:
 
-[Pricing output here]
+```
+SALES KIT COMPLETE
+═══════════════════════════════════════════════════
 
-
-─── MARKETING ────────────────────────────────────────
-
-[Marketing output here]
-
-
-─── QUOTATION ────────────────────────────────────────
-
-[Quotation output here]
-
-
-─── SUMMARY ──────────────────────────────────────────
-
-[Summary and next steps]
+Files saved to docs/sales-kit/:
+  • pricing.md        — base, packages, partner channels
+  • marketing.md      — taglines, pitch, social post
+  • quotation.md      — [customer-type] package breakdown
+  • README.md         — index of all generated files
 ```
 
 ## Scenario Patterns

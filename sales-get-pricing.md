@@ -27,6 +27,15 @@ Get comprehensive pricing information based on the scenario specified.
 
 3. **Calculate and format**: Apply margins, calculate totals, format output
 
+## Output Destination
+
+1. Create directory `docs/sales-kit/` if it doesn't exist.
+2. Write the full formatted output to `docs/sales-kit/pricing.md`.
+3. Display a brief confirmation:
+   ```
+   Pricing saved to docs/sales-kit/pricing.md
+   ```
+
 ## Scenario Patterns
 
 ### Direct Sales

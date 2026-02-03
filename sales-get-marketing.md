@@ -13,6 +13,15 @@ Generate marketing content for products/services.
 /sales-get-marketing [type] [style]
 ```
 
+## Output Destination
+
+1. Create directory `docs/sales-kit/` if it doesn't exist.
+2. Write the full formatted output to `docs/sales-kit/marketing.md`.
+3. Display a brief confirmation:
+   ```
+   Marketing content saved to docs/sales-kit/marketing.md
+   ```
+
 ## Types
 
 | Type | Description |

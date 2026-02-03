@@ -14,6 +14,15 @@ Generate quotation templates and breakdowns.
 /sales-get-quotation for [custom requirements]
 ```
 
+## Output Destination
+
+1. Create directory `docs/sales-kit/` if it doesn't exist.
+2. Write the full formatted output to `docs/sales-kit/quotation.md`.
+3. Display a brief confirmation:
+   ```
+   Quotation saved to docs/sales-kit/quotation.md
+   ```
+
 ## Customer Types
 
 | Type | Description |
